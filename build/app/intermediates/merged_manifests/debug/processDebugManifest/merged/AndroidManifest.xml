@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tagmee"
+    package="com.oriontechnium.tagmee"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -23,9 +23,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:debuggable="true"
         android:icon="@mipmap/launcher_icon"
-        android:label="tagmee" >
+        android:label="TagMee" >
         <activity
-            android:name="com.example.tagmee.MainActivity"
+            android:name="com.oriontechnium.tagmee.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

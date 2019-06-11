@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tagmee">
+    package="com.oriontechnium.tagmee"
+    android:versionCode="30"
+    android:versionName="2.0029" >
+
+     <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -8,7 +12,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="tagmee"
+        android:label="TagMee"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

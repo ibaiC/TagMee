@@ -133,7 +133,7 @@ class _HomeScreen extends State<HomeScreen> {
                     else { output = '';}
                     return GestureDetector(
                       child: AutoSizeText( output, 
-                        maxLines: 25,
+                        maxLines: 17,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.indigo,
