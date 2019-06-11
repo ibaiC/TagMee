@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jun 11 10:40:38 BST 2019
+#Tue Jun 11 15:34:53 BST 2019
 4.path=flutter_assets/assets/images/desert.png
 13.baseType=DIRECTORY
 8.set=ASSET

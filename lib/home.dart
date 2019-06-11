@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/services.dart';
 
 import 'dart:async';
 import 'dart:convert';
@@ -56,7 +57,8 @@ class _HomeScreen extends State<HomeScreen> {
         // return object of type Dialog
         return AlertDialog(
           title: Text("TagMee", textAlign: TextAlign.center),
-          content: Text("1. Input words related to your image in the box \n2. Tap on the TagMee button \n3. Copy the best-performing hashtags for your related words onto your Instagram post \n4. Get clout.\n\nAuthor: Ibai Castells"),
+          content: Text("1.  Input words related to your image in the box \n2. Tap on the TagMee button \n3. Copy the best-performing hashtags for your related words onto your Instagram post \n 4. Tap on the hashtags box to copy them to the clipboard\n5. Get clout.\n\nAuthor: Ibai Castells",
+          style: TextStyle(fontSize: 11.0),),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             GradientButton(
@@ -75,7 +77,9 @@ class _HomeScreen extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext ctxt) {
+    final key = new GlobalKey<ScaffoldState>();
     return new Scaffold(
+      key: key,
       body: Stack(
       children: <Widget>[
         Container(
@@ -125,13 +129,22 @@ class _HomeScreen extends State<HomeScreen> {
                       }
                     }
                     else { output = '';}
-                    return AutoSizeText( output, 
-                      maxLines: 25,
-                      style: TextStyle(
-                        color: Colors.indigo,
-                        fontSize: 25.0,
+                    return GestureDetector(
+                      child: AutoSizeText( output, 
+                        maxLines: 25,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.indigo,
+                          fontSize: 25.0,
+                        ),
                       ),
-                    );
+                      onTap: () {
+                        Clipboard.setData(ClipboardData(text: output));
+                        key.currentState.showSnackBar(
+                          SnackBar(content: Text('Copied Hashtags to clipboard'),)
+                        );
+                      },
+                );
                   }
                 )
               )
@@ -140,7 +153,7 @@ class _HomeScreen extends State<HomeScreen> {
           )
         ),
         Padding(
-          padding: EdgeInsets.only(top: 475.0),
+          padding: EdgeInsets.only(top: 495.0),
           child: Align(
             alignment: Alignment.topCenter,
             child: Container(
@@ -151,7 +164,7 @@ class _HomeScreen extends State<HomeScreen> {
                     borderSide: BorderSide(color: Colors.white),
                   ),
                   hintText: "Related words",
-                  hintStyle: TextStyle(color: Colors.grey[400])
+                  hintStyle: TextStyle(color: Colors.white)
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -164,35 +177,39 @@ class _HomeScreen extends State<HomeScreen> {
           ),
           )
         ),
-        Positioned(
-          top: 560.0,
-          left: 150.0,
-          child: GradientButton(
-          increaseWidthBy: 30.0,
-          increaseHeightBy: 5.0,
-          child: Text('TagMee',
-            style: TextStyle(fontSize: 15),),
-          callback: () {
-            setState((){
-            });
-          },
-          gradient: Gradients.hotLinear,
-        ),
-        ),
-        Positioned(
-          top: 15,
-          left: 355,
-          child: IconButton(
-            icon: Icon(Icons.info),
-            iconSize: 30.0,
-            color: Colors.white.withOpacity(0.5),
-            onPressed: () {
-              _showDialog();
-            },
+        Padding(
+          padding: EdgeInsets.only(top: 560.0),
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: GradientButton(
+              increaseWidthBy: 30.0,
+              increaseHeightBy: 5.0,
+              child: Text('TagMee',
+                style: TextStyle(fontSize: 15),
+              ),
+              callback: () {
+                // Rebuild when button is pressed so changes to Hashtags textbox take place
+                setState((){});
+              },
+              gradient: Gradients.hotLinear
+            )
           ),
-        )
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 15.0),
+          child: Align(
+            alignment: Alignment.topRight,
+            child: IconButton(
+              icon: Icon(Icons.info),
+              iconSize: 30.0,
+              color: Colors.white.withOpacity(0.5),
+              onPressed: () {
+                _showDialog();
+              },
+            ),
+          ),
+        ),
       ],
     ));
   }
 }
-

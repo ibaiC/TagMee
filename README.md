@@ -1,8 +1,16 @@
-# TagMee
-A mobile application to find best performing hashtags for Instagram posts. Uses an AI powered API to analyze the performance of hashtags and find the most suitable ones for given topics. Fully built using Flutter.
+# tagmee
 
-## Usage
-1. Clone the repository
-2. Open the project in Android Studio or VS Code (or any IDE that supports Flutter)
-3. Run `flutter run` with the emulator running or your mobile device plugged in to the PC.
-4. The app will open itself on the device.
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our 
+[online documentation](https://flutter.dev/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.

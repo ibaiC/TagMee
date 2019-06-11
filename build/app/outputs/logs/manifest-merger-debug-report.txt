@@ -27,7 +27,7 @@ ADDED from /home/ibai/Documents/personal/tagmee/android/app/src/main/AndroidMani
 	android:label
 		ADDED from /home/ibai/Documents/personal/tagmee/android/app/src/main/AndroidManifest.xml:11:9-31
 	android:icon
-		ADDED from /home/ibai/Documents/personal/tagmee/android/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /home/ibai/Documents/personal/tagmee/android/app/src/main/AndroidManifest.xml:12:9-45
 	android:name
 		ADDED from /home/ibai/Documents/personal/tagmee/android/app/src/main/AndroidManifest.xml:10:9-57
 activity#com.example.tagmee.MainActivity
