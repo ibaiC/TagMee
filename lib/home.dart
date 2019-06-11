@@ -86,28 +86,31 @@ class _HomeScreen extends State<HomeScreen> {
             ),
           ),
         ),
-        Positioned(
-          top: 80.0,
-          left: 155.0,
-          child: Text("Hashtags",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 35.0,
-              fontFamily: 'Billabong',
-            ),
-          ),
+        Padding(
+          padding: EdgeInsets.only(top: 80.0),
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: Text('Hashtags',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 35.0,
+                fontFamily: 'Billabong',
+              )
+            ,),
+          )
         ),
-        Positioned(
-          top: 150.0,
-          left: 65.0,
-          height: 300.0,
-          width: 280,
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.5),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        Padding(
+          padding: EdgeInsets.only(top: 150.0),
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              height: 300.0,
+              width: 280.0,
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.5),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
-            child: Align(
+              child: Align(
               alignment: Alignment.topCenter,
               child: Padding(
                 padding: EdgeInsets.all(15),
@@ -133,29 +136,33 @@ class _HomeScreen extends State<HomeScreen> {
                 )
               )
             ),
-          ),
+            ),
+          )
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(65.0, 475.0, 0.0, 0.0),
-          child: Container(
-            width: 280,
-            child: TextField(
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
+          padding: EdgeInsets.only(top: 475.0),
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              width: 280,
+              child: TextField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  hintText: "Related words",
+                  hintStyle: TextStyle(color: Colors.grey[400])
                 ),
-                hintText: "Related Words",
-                hintStyle: TextStyle(color: Colors.grey[400])
-              ),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white
-              ),
-              onChanged: (text) {
-              related_words = text;
-              },
-            )
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white
+                ),
+                onChanged: (text) {
+                related_words = text;
+                },
+              )
           ),
+          )
         ),
         Positioned(
           top: 560.0,
@@ -188,3 +195,4 @@ class _HomeScreen extends State<HomeScreen> {
     ));
   }
 }
+
