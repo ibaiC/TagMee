@@ -1,0 +1,38 @@
+name: tagmee
+description: A project to find the best performing hashtags for related words. It makes use of an AI powered API.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  gradient_widgets: ^0.4.0
+  auto_size_text: ^1.1.2
+  http: ^0.12.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+   - assets/images/desert.png
+   - assets/images/desert2.png
+
+  fonts:
+    - family: Nova
+      fonts:
+        - asset: assets/fonts/proxima.otf
+        - asset: assets/fonts/proxima_bold.otf
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
