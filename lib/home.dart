@@ -77,7 +77,9 @@ class _HomeScreen extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext ctxt) {
-    final key = new GlobalKey<ScaffoldState>();
+    final key = GlobalKey<ScaffoldState>();
+    var text_search = new TextEditingController();
+    
     return new Scaffold(
       key: key,
       body: Stack(
@@ -170,8 +172,9 @@ class _HomeScreen extends State<HomeScreen> {
                 style: TextStyle(
                   color: Colors.white
                 ),
-                onChanged: (text) {
-                related_words = text;
+                controller: text_search,
+                onSubmitted: (inputWords) {
+                related_words = inputWords;
                 },
               )
           ),

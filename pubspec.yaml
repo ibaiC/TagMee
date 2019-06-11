@@ -15,6 +15,7 @@ dependencies:
   auto_size_text: ^1.1.2
   http: ^0.12.0+2
   flutter_launcher_icons: ^0.7.2
+  animated_splash: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +34,7 @@ flutter:
   assets:
    - assets/images/desert.png
    - assets/images/desert2.png
+   - assets/images/launch.png
 
   fonts:
     - family: Nova

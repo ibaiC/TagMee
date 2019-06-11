@@ -1,4 +1,4 @@
-#Tue Jun 11 15:34:52 BST 2019
-base.0=/home/ibai/Documents/personal/tagmee/build/app/intermediates/transforms/dexMerger/debug/0
+#Tue Jun 11 16:06:01 BST 2019
+base.0=/home/ibai/Documents/personal/TagMee/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

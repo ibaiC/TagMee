@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tagmee/home.dart';
+import 'package:animated_splash/animated_splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Nova'
       ),
-      home: HomeScreen(),
+      home: AnimatedSplash(
+        home: HomeScreen(),
+        imagePath: 'assets/images/launch.png',
+        duration: 1500,
+        type: AnimatedSplashType.StaticDuration,),
     );
   }
 }
